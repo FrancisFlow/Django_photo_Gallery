@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
+{% for image in images %}
+<img src="{{image.image.url}}" alt="" class="img-responsive">
+{{image.image_description}}
+{{image.image_name}}
+{{image.image_location}}
+{{image.image_category}}
 
+{% endfor %}
 <h1 class="text-center" >Photo Land, home to all</h1>
 {% endblock %}
