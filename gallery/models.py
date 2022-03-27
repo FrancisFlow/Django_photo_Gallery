@@ -18,6 +18,11 @@ class Image(models.Model):
         all_images=cls.objects.all()
         return all_images
     
+    @classmethod
+    def search_by_category(cls, search_term):
+        images= cls.objects.filter(image_category__name__icontains=search_term)
+        return images
+    
 class Location(models.Model):
     name=models.CharField(max_length=50)
 
