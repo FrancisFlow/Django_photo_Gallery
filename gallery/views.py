@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from .models import Image, Location, Category
+
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
+    images=Image.get_images()
+
+    return render(request, 'home.html', {"images":images})
