@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 {% for image in images %}
-<img src="{{image.image.url}}" alt="" class="img-responsive">
+<img style="max-width:300px; max-height:300px;" src="{{image.image.url}}" alt="" class="img-responsive">
 {{image.image_description}}
 {{image.image_name}}
 {{image.image_location}}
