@@ -33,10 +33,8 @@ As of 28th of March, 2022, there are no know bugs. If you do find one, feel free
 ## Support and contact details
 For any feedback or comments, feel free to reach out to me at francisngigi948@gmail.com
 
- ### License
+## License
 
-    _Licensed under the [MIT-LICENSE](LICENSE)_
-    Copyright (c) 2022 **Francis Ngigi**
-
+Licensed under the MIT LICENSE.
 
 
