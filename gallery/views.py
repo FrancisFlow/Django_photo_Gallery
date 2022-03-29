@@ -4,8 +4,10 @@ from .models import Image, Location, Category
 # Create your views here.
 def home(request):
     images=Image.get_images()
+    locations=Location.objects.all()
 
-    return render(request, 'home.html', {"images":images})
+
+    return render(request, 'home.html', {"images":images, "locations":locations})
 
 def search_by_category(request):
     if 'image_category' in request.GET and request.GET["image_category"]:
@@ -16,3 +18,7 @@ def search_by_category(request):
     else:
         message="No search term added"
         return render(request, 'search.html', {"message":message})
+
+def photos_by_location(request, location_id):
+    images=Image.filter_by_location(location_id)
+    return render(request, 'locations.html', {"images":images})
