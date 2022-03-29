@@ -6,7 +6,7 @@
     <div class="row">
         {% for image in images %}
         <div class="col-md-4">
-            <img src="{{image.image.url}}" alt="" class="img-responsive">
+            <img src="{{image.image.url}}" alt="" class="img-responsive" style="max-height:40%; max-width:50%;">
         </div>
         {% endfor %}
     </div>
