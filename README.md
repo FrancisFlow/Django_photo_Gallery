@@ -4,6 +4,8 @@
 ## Description
 Photo Land is a personal gallery application that allows users to view different images depending on category or location.
 A user can search for images on the application by category names.
+![PhotoLand](./static/imagez/landing.png)
+
 
 ## Development
 To make advancements/modifications, follow these steps:
