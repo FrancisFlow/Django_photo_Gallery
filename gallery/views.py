@@ -5,9 +5,10 @@ from .models import Image, Location, Category
 def home(request):
     images=Image.get_images()
     locations=Location.objects.all()
+    categories=Category.objects.all()
 
 
-    return render(request, 'home.html', {"images":images, "locations":locations})
+    return render(request, 'home.html', {"images":images, "locations":locations, "categories":categories})
 
 def search_by_category(request):
     if 'image_category' in request.GET and request.GET["image_category"]:
