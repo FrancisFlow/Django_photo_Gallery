@@ -25,7 +25,7 @@ class Image(models.Model):
 
     @classmethod
     def filter_by_location(cls, id):
-        images_by_location=cls.objects.filter(image_location_id=id)
+        images_by_location=cls.objects.filter(image_location=id)
         return images_by_location
 class Location(models.Model):
     name=models.CharField(max_length=50)
