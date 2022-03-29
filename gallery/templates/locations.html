@@ -2,13 +2,22 @@
 
 {% block content %}
 {{block.super}}
-<div class="container">
+<div class="container" style="padding-top:30px;">
     <div class="row">
+       
+
         {% for image in images %}
+        {% if image %}
         <div class="col-md-4">
-            <img src="{{image.image.url}}" alt="" class="img-responsive" style="max-height:40%; max-width:50%;">
+            <img src="{{image.image.url}}" alt="" class="img-responsive" style="max-height:80%; max-width:80%;">
         </div>
+        {% else %}
+        <h1>
+            There are currently no images for {{location.name}}
+        </h1>
+        {% endif %}
         {% endfor %}
+       
     </div>
 </div>
 {% endblock %}
