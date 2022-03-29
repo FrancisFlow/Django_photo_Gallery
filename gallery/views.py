@@ -21,4 +21,5 @@ def search_by_category(request):
 
 def photos_by_location(request, location_id):
     images=Image.filter_by_location(location_id)
-    return render(request, 'locations.html', {"images":images})
+    location=Location.objects.get(id=location_id)
+    return render(request, 'locations.html', {"images":images, "location":location})
